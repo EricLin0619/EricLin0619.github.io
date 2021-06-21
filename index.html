@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>我的個人簡歷</title>
+        <style>
+            body{
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            background-color: #02005B;
+            color: rgba(255,255,255,0.95);
+            font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 1px;
+            font-family: "微軟正黑體",sans-serif;
+            }
+            
+            /* 複寫區 */
+            ul{
+            padding: 0;
+            list-style: none;
+            }
+            h2{
+            margin: 0;
+            margin-bottom: 25px;
+            font-weight: 400;
+            }
+            h2::after{
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 8px;
+            background-color: #FF7168;
+            margin-left: 10px;
+            }
+            h4{
+            margin: 0;
+            margin-top: 40px;
+            opacity: 0.8;
+            font-weight: 400;
+            }
+            a{
+            color: white;
+            text-decoration: none
+            }
+            hr{
+            border: none;
+            border-bottom: solid 4px #FF7168;
+            width: 40%;
+            margin-left: 0;
+            }
+            
+            
+            .resume{
+            display: flex;
+            max-width: 950px;
+            border: solid 8px white;
+            padding: 50px;
+            position: relative;
+            }
+            .left{
+            flex: 5
+            }
+            .right{
+            flex: 7
+            }
+            .left,.right{
+            padding: 15px
+            }
+            .left{
+            padding-right: 50px;
+            border-right: solid 1px #FF7168;
+            }
+            
+            .right{
+            padding-left: 50px;
+            padding-top: 150px;
+            }
+            
+            
+            .decoration{
+            width: 300px;
+            height: 140px;
+            background: linear-gradient(135deg,#FF5F5F,#FFFFAE);
+            border-radius: 70px 0px 0px 70px;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            }
+            
+            .listExperience>li{
+            display: flex;
+            margin-bottom: 10px;
+            
+            }
+            
+            .listExperience>li:nth-child(1) ul{
+            border-color: #FF7168
+            }
+            .listExperience>li:nth-child(2) ul{
+            border-color: #FFA582
+            }
+            .listExperience>li:nth-child(3) ul{
+            border-color: #FFB087
+            }
+            .listExperience>li:nth-child(4) ul{
+            border-color: #FFDE9E
+            }
+            .listExperience li ul{
+            padding-left: 10px;
+            margin-left: 10px;
+            border-left: solid 4px white
+            }
+            
+            
+            /* list skill */
+            .listSkill{
+            display: flex;
+            flex-wrap: wrap;
+            
+            }
+            .listSkill li{
+            width: 25%;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            }
+            
+            .circle{
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(255, 113, 104,0.4);
+            }
+            .circle::after{
+            content: "";
+            display: block;
+            background-color: #02005B;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            border-radius: 50%;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%)
+            }
+            .p90,.p180,.p270,.p360{
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            background-color: #FF7168;
+            }
+            .p180{
+            top: 50%;
+            }
+            .p270{
+            left: 0;
+            top: 50%;
+            }
+            .p360{
+            left: 0;
+            top: 0;
+            }
+            
+            
+            /* list program */
+            
+            .listProgram .bar{
+            width: 150px;
+            height: 10px;
+            border: solid 2px #FF7168;
+            border-radius: 5px
+            }
+            .listProgram li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            }
+            .value{
+            height: 100%;
+            width: 60%;
+            background-color: #FF7168;
+            }
+            .value.p10{
+            width: 10%;
+            }
+            
+            .value.p20{
+            width: 20%;
+            }
+            .value.p30{
+            width: 30%;
+            }
+            .value.p40{
+            width: 40%;
+            }
+            .value.p50{
+            width: 50%;
+            }
+            .value.p60{
+            width: 60%;
+            }
+            .value.p70{
+            width: 70%;
+            }
+            .value.p80{
+            width: 80%;
+            }
+            .value.p90{
+            width: 90%;
+            }
+            
+            .value.p100{
+            width: 100%;
+            }
+            
+            .btn{
+            border: solid 3px #FF7168;
+            padding: 5px 20px;
+            margin-right: 10px;
+            }
+            .fill{
+            background-color: #FF7168;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="resume">
+            <div class="left">
+              <h1>林冠廷</h1>
+              <h4>中央大學資訊管理學系 | 妖精尾巴</h4>
+              <hr>
+              <p>為了能有朝一日能突破死亡遊戲SAO，正在艾恩葛朗特裡星爆中 ε=ε=ε=ε=┌(;￣▽￣)┘</p>
+              
+              <div class="block">
+                <h4>關於我</h4>
+                <h2>個人資料</h2>
+                <ul class="listSkill">
+                  <li>
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                      <div class="p270"></div>
+                      <div class="p360"></div>
+                    </div>
+                    姓名:林冠廷
+                  </li>
+                  <li>
+                    
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                      <div class="p270"></div>
+                    </div>
+                    公會:妖精尾巴
+                  </li>
+                  <li>
+                   
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                      <div class="p270"></div>
+                    </div>
+                    夢想:成為火影
+                  </li>
+                  <li>
+                    
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                      <div class="p270"></div>
+                    </div>
+                    職業:單手劍士
+                  </li>
+                  <li>
+                    
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                      <div class="p270"></div>
+                      <div class="p360"></div>
+                    </div>
+                    特殊技能:二刀流
+                  </li>
+                  <li>
+                    
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                    </div>
+                    大招:日蝕
+                  </li>
+                  <li>
+                    
+                    <div class="circle">
+                      <div class="p90"></div>
+                      <div class="p180"></div>
+                      <div class="p270"></div>
+                    </div>
+                    老婆:亞絲娜
+                  </li>
+                </ul>
+
+              </div>
+              <div class="block">
+                <h2>專業技能</h2>
+                <ul class="listProgram">
+                  <li>享用美食
+                    <div class="bar">
+                      <div class="value p40"></div>
+                    </div>
+                  </li>
+                  <li>看動漫
+                    <div class="bar">
+                      <div class="value p50"></div>
+                    </div>
+                  </li>
+                  <li>聽日文流行歌
+                    <div class="bar">
+                      <div class="value p50"></div>
+                    </div>
+                  </li>
+                  <li>普通重型機車駕駛
+                    <div class="bar">
+                      <div class="value p30"></div>
+                    </div>
+                  </li>
+                  <li>一般自小客車駕駛
+                    <div class="bar">
+                      <div class="value p40"></div>
+                    </div>
+                  </li>
+                  <li>堆高機操作
+                    <div class="bar">
+                      <div class="value p80"></div>
+                    </div>
+                  </li>
+                  <li>耍中二
+                    <div class="bar">
+                      <div class="value p80"></div>
+                    </div>
+                  </li>
+          
+                </ul>
+              </div>
+            </div>
+            <div class="right">
+              <div class="decoration"></div>
+              <div class="block">
+                <h2>經歷</h2>
+                <ul class="listExperience">
+                  <li class="year">2014
+                    <ul>
+                      <li>在台南市忠孝國中擔任學生</li>
+                      <li>首次進入艾恩葛朗特</li>
+                    </ul>
+                  </li>
+                  <li class="year">2016
+                    <ul>
+                      <li>進入國立台南一中就讀</li>
+                      <li>獲得最速劍士的稱號</li>
+                    </ul>
+                  </li>
+                  <li class="year">2019
+                    <ul>
+                      <li>考上中央大學</li>
+                      <li>因為考太爛休學一年，但是也沒重考 (〃￣ω￣〃ゞ</li>
+                      <li>進入瑞俋實業股份有限公司工作</li>
+                      <li>獲得特殊技能"二刀流"</li>
+                      <li>擊殺血盟騎士團團長</li>
+                    </ul>
+                  </li>
+                  <li class="year">2021
+                    <ul>
+                      
+                      <li>因為新冠肺炎而被困在宿舍</li>
+                      <li>正坐在電腦桌前寫該死的期末考</li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="block">
+                <h2>冒險經歷</h2>
+                 <ul>
+                  <li>與攻略組一起參與第1層頭目攻略戰，攻略戰期間與亞絲娜組隊，最後獲得LA獎勵。</li>
+                  <li>與攻略組一起參與第3層頭目攻略戰。</li>
+                  <li>與攻略組、NPC黑闇精靈們一起參與第4層頭目攻略戰。</li>
+                  <li>加入了公會「月夜黑貓團」，但對公會隱瞞自己「封弊者」的身份。</li>
+                  <li>與亞絲娜偶然於第36層中聽見尤娜唱歌。</li>
+                  <li>攻略組發起微笑棺木討伐戰，與亞絲娜等人一起參與討伐戰。</li>
+                  <li>已被判定死亡的狀態下強行對希茲克利夫發出致命一擊，最終雙方同歸於盡，成功攻略遊戲「SAO」能夠回到現實世界。</li>
+                  <li>登出SAO後，於現實中專注尋找明日奈的下落</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </body>     
+</html>
