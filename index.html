@@ -6,13 +6,13 @@
             body{
             padding: 50px;
             display: flex;
-            justify-content: center;
-            background-color: #02005B;
-            color: rgba(255,255,255,0.95);
+            justify-content: center; /*設定網頁對齊主軸線中央*/
+            background-color: #02005B;  /*整個網頁的背景色*/
+            color: rgba(255,255,255,0.95); /*網頁文字的顏色還有透明度*/
             font-size: 15px;
-            line-height: 28px;
+            line-height: 28px;  /*文字行高設定*/
             letter-spacing: 1px;
-            font-family: "微軟正黑體",sans-serif;
+            font-family: "微軟正黑體",sans-serif; /*設定字體為微軟正黑體*/
             }
             
             /* 複寫區 */
@@ -401,8 +401,16 @@
                   <li>已被判定死亡的狀態下強行對希茲克利夫發出致命一擊，最終雙方同歸於盡，成功攻略遊戲「SAO」能夠回到現實世界。</li>
                   <li>登出SAO後，於現實中專注尋找明日奈的下落</li>
                 </ul>
+                <p id="click">我會變身喔!</p>
+                <button type="button" style="background-color:darkgray" onclick="myFunction()">按我啦ㄟ!</button>
               </div>
             </div>
           </div>
+          
+        <script>
+            function myFunction(){
+                document.getElementById("click").innerHTML="(」・ω・)」うー！(／・ω・)／にゃー！";
+            }
+        </script>
     </body>     
 </html>
